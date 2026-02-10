@@ -1,8 +1,8 @@
 task: detect
 mode: train
-model: yolo11n.pt
-data: ./data_yml/road/road.yaml
-epochs: 40
+model: utils/models/yolo11n.pt
+data: coco.yaml
+epochs: 20
 time: null
 patience: 100
 batch: 16
@@ -103,4 +103,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /mnt/c/Users/Nicholas Khor/OneDrive/projects/year 3/ARAS/runs/detect/train
+save_dir: /mnt/c/Users/Nicholas Khor/OneDrive/WORK/PEIRONEX/research/YOLO/runs/detect/train

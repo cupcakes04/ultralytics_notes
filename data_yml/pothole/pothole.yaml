@@ -1,0 +1,11 @@
+path: /mnt/d/DATASETS/pothole
+
+train: autosplit_train.txt 
+val: autosplit_val.txt
+test: autosplit_test.txt
+
+nc: 1
+names: ['pothole']
+
+
+# Dataset source: https://www.kaggle.com/datasets/ashishkumarak/training-setzip
