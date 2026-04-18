@@ -121,6 +121,33 @@ streamlit run utils/streamlit.py
 streamlit run utils/streamlit.py path/to/model.pt
 ```
 
+### 5. Filter and group classes
+
+you can use this to filter unwanted class or merge classes
+remeber to set the format_type accordingly to dataset folders as well as change the filtered folders (e.g: train_new.txt to train.txt)
+
+```python
+yaml_file = './cars.yaml'   # standard yolo file with keys: 'path' and 'names'
+merge_map_file = './class_merge_map.json'
+'''
+example:
+{
+    "car": "car",
+    "van": "big car",
+    "truck": "big car",
+    "pedestrian": "people",
+    "person_sitting": "people",
+    "cyclist": "bicycle",
+    "tram": "misc",
+    "misc": "misc"
+}
+'''
+
+# format_type can be 'split_first' (train/images) or 'images_first' (images/train)
+filter_yolo_classes(yaml_file, merge_map_file, format_type='split_first')
+```
+
+
 **Features:**
 - Web-based inference interface
 - Supports all Ultralytics models (YOLO11, YOLOv10, YOLOv8, etc.)
