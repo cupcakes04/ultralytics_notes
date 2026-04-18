@@ -1,4 +1,4 @@
-# ARAS - Advanced Recognition and Segmentation
+# Basic Computer Vision guides
 
 A computer vision toolkit for object detection, segmentation, and interactive annotation using YOLO and SAM2 models.
 
